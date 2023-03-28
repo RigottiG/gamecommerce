@@ -6,9 +6,11 @@ Hello, and welcome to our under construction e-commerce platform repository! We'
 # Technologies
 The platform is built with the following technologies:
 
-Ruby on Rails: A popular and powerful web framework for building backend applications.
-NextJS: A React-based framework for building fast and responsive frontend applications.
-Redux: A predictable state container for managing complex application states.
+1. Ruby on Rails: A popular and powerful web framework for building backend applications.
+2. NextJS: A React-based framework for building fast and responsive frontend applications.
+3. Redux: A predictable state container for managing complex application states.
+
+
 ...and more to come as the project evolves!
 
 # Testing
