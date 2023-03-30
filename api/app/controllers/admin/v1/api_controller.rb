@@ -3,7 +3,8 @@
 module Admin
   module V1
     class ApiController < ApplicationController
-      include Authenticable
+      class ForbiddenAccess < StandardError; end
+      include Authenticate
 
       def render_error(message: nil, fields: nil, status: :unprocessable_entity)
         errors = {}
