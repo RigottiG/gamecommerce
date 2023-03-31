@@ -9,4 +9,7 @@ class SystemRequirement < ApplicationRecord
   validates :storage, presence: true
 
   has_many :games, dependent: :restrict_with_error
+
+  include NameSearchable
+  include Paginatable
 end
