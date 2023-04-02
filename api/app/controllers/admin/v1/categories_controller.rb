@@ -6,7 +6,7 @@ module Admin
       before_action :load_category, only: %i[update destroy]
 
       def index
-        @categories = Category.all
+        @categories = load_categories
       end
 
       def create
@@ -30,6 +30,11 @@ module Admin
 
       def load_category
         @category = Category.find(params[:id])
+      end
+
+      def load_categories
+        permitted = params.permit({ search: :name }, { order: {} }, :page, :length)
+        Admin::ModelLoadingService.new(Category.all, permitted).call
       end
 
       def category_params
